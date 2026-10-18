@@ -1,0 +1,20 @@
+﻿ID,Day,Date,Time,Activity,Category,Duration(min),Effort,Type
+1,1,13/10/2026,08:30,Walking,Commute,20,2,university 
+2,1,13/10/2026,17.45,Strength training ,Gym,50,3,university
+3,1,13/10/2026,20:50,Mobility,Recovery,5,1,university
+4,2,14/10/2026,13:00,Walking,Commute,15,1,university
+5,2,14/10/2026,18:00,Mobility,Recovery,10,1,university
+6,3,15/10/2026,14:30,Walking ,Commute,20,1,university
+7,3,15/10/2026,17:00,Walking,Commute,20,2,university
+8,3,15/10/2026,18:30,Strength training ,Gym,30,4,university
+9,4,16/10/2026,08:30,Walking,Commute,15,2,university
+10,4,16/10/2026,12:20,Studying,Sedentary,70,0,university
+11,4,16/10/2026,16:30,Walking,Commute,15,2,university 
+12,4,16/10/2026,19:00,Studying,Sedentary,40,0,university
+13,5,17/10/2026,10:00,Mobility,Recovery,15,2,non university
+14,5,17/10/2026,14:00,Bodyweight training,Gym,20,3,non university
+15,5,17/10/2026,16:30,Walking ,Commute,30,2,non university
+16,6,18/10/2026,09:15,Football,Sports,120,5,non university
+16,6,18/10/2026,16:50,Watching TV,Sedentary,60,0,non university
+17,6,18/10/2026,18:45,Stretching,Recovery,10,3,non university
+18,6,18/10/2026,19:20,Foam Rolling,Recovery,5,2,non university
