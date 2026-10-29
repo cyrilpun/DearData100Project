@@ -45,3 +45,8 @@
 44,15,27/10/2026,09:10,Walking ,Commute,20,2,university 
 45,15,27/10/2026,09:50,Studying,Sedentary,40,0,university 
 46,15,27/10/2026,12:10,Walking ,Commute,15,2,university 
+47,16,28/10/2026,15:30,Walking,Recovery,40,2,non university
+48,16,28/10/2026,06:50,Stretching,Recovery,15,2,non university
+49,17,29/10/2026,08:40,Mobility,Recovery,20,2,university
+50,17,29/10/2026,17:30,Football,Sports,60,4,university
+51,17,29/10/2026,19:10,Stretching,Recovery,15,3,university
