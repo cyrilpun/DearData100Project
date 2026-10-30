@@ -9,6 +9,19 @@ void setup() {
   println("Number of observations: " + movementData.getRowCount());
   println("Number of columns: " + movementData.getColumnCount());
 
+  // Read the first observation 
+  TableRow firstRow = movementData.getRow(0);
+  
+  String activity = firstRow.getString("Activity");
+  String category = firstRow.getString("Category");
+  int duration = firstRow.getInt("Duration(min)");
+  int effort = firstRow.getInt("Effort");
+  
+  println("First activity: " + activity);
+  println("Category: " + category);
+  println("Duration: " + duration + " minutes");
+  println("Effort: " + effort);
+
   background(245);
 
   // Project title
