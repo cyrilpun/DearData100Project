@@ -1,5 +1,14 @@
+Table movementData;
+
 void setup() {
   size(600, 450);
+
+  //Load the csv data
+  movementData = loadTable("Movement_Data.csv", "header");
+
+  println("Number of observations: " + movementData.getRowCount());
+  println("Number of columns: " + movementData.getColumnCount());
+
   background(245);
 
   // Project title
