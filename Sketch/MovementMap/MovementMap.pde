@@ -9,18 +9,24 @@ void setup() {
   println("Number of observations: " + movementData.getRowCount());
   println("Number of columns: " + movementData.getColumnCount());
 
-  // Read the first observation 
-  TableRow firstRow = movementData.getRow(0);
-  
-  String activity = firstRow.getString("Activity");
-  String category = firstRow.getString("Category");
-  int duration = firstRow.getInt("Duration(min)");
-  int effort = firstRow.getInt("Effort");
-  
-  println("First activity: " + activity);
-  println("Category: " + category);
-  println("Duration: " + duration + " minutes");
-  println("Effort: " + effort);
+  // Read every observation in the CSV
+  for (int i = 0; i < movementData.getRowCount(); i++) {
+
+    // Get the current row
+    TableRow row = movementData.getRow(i);
+
+    //Read information from that row
+    String activity = row.getString("Activity");
+    String category = row.getString("Category");
+    int duration = row.getInt("Duration(min)");
+    int effort = row.getInt("Effort");
+
+    //Print the observation in the console
+    println("First activity: " + activity);
+    println("Category: " + category);
+    println("Duration: " + duration + " minutes");
+    println("Effort: " + effort);
+  }
 
   background(245);
 
