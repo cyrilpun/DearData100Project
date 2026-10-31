@@ -2,6 +2,7 @@ Table movementData;
 
 void setup() {
   size(600, 450);
+  background(245);
 
   //Load the csv data
   movementData = loadTable("Movement_Data.csv", "header");
@@ -25,6 +26,11 @@ void setup() {
     //Only process non-sedentary observations
     if (!category.equals("Sedentary")) {
 
+      //Draw a circle for this observation
+      fill(70, 130, 180);
+      noStroke();
+      ellipse(random(50, 750), random(150, 550), 20, 20);
+
       //Print the observation in the console
       println("First activity: " + activity);
       println("Category: " + category);
@@ -32,8 +38,6 @@ void setup() {
       println("Effort: " + effort);
     }
   }
-
-  background(245);
 
   // Project title
   fill(30);
@@ -44,14 +48,4 @@ void setup() {
   textSize(14);
   fill(90);
   text("Exploring my daily physical activites, time and effort", 40, 90);
-
-  // first activity symbol
-  fill(70, 130, 180);
-  noStroke();
-  ellipse(100, 170, 50, 50);
-
-  // activity level
-  fill(30);
-  textSize(14);
-  text("Football", 70, 210);
 }
