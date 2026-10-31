@@ -21,11 +21,16 @@ void setup() {
     int duration = row.getInt("Duration(min)");
     int effort = row.getInt("Effort");
 
-    //Print the observation in the console
-    println("First activity: " + activity);
-    println("Category: " + category);
-    println("Duration: " + duration + " minutes");
-    println("Effort: " + effort);
+
+    //Only process non-sedentary observations
+    if (!category.equals("Sedentary")) {
+
+      //Print the observation in the console
+      println("First activity: " + activity);
+      println("Category: " + category);
+      println("Duration: " + duration + " minutes");
+      println("Effort: " + effort);
+    }
   }
 
   background(245);
