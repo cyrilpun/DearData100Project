@@ -16,7 +16,7 @@ void setup() {
     // Get the current row
     TableRow row = movementData.getRow(i);
 
-    //Read information from that row
+    //Read information from that rowYe
     String activity = row.getString("Activity");
     String category = row.getString("Category");
     int duration = row.getInt("Duration(min)");
@@ -26,10 +26,21 @@ void setup() {
     //Only process non-sedentary observations
     if (!category.equals("Sedentary")) {
 
-      //Draw a circle for this observation
+      //Set circle size based on activity duration
+      int circleSize;
+
+      if (duration < 20) {
+        circleSize = 15;
+      } else if (duration < 45) {
+        circleSize = 25;
+      } else {
+        circleSize = 35;
+      }
+
+      // Draw a circle for this observation
       fill(70, 130, 180);
       noStroke();
-      ellipse(random(50, 750), random(150, 550), 20, 20);
+      ellipse(random(50, 550), random(150, 400), circleSize, circleSize);
 
       //Print the observation in the console
       println("First activity: " + activity);
