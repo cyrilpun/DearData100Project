@@ -11,6 +11,8 @@ void setup() {
   println("Number of columns: " + movementData.getColumnCount());
 
   // Read every observation in the CSV
+  int symbolCount = 0;
+
   for (int i = 0; i < movementData.getRowCount(); i++) {
 
     // Get the current row
