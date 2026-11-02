@@ -39,7 +39,6 @@ void setup() {
         circleSize = 35;
       }
 
-
       //Calculate the position of this activity circle
       int column = symbolCount % 10;
       int rowNumber = symbolCount / 10;
@@ -47,8 +46,22 @@ void setup() {
       float x = 40 + column * 55;
       float y = 150 + rowNumber * 55;
 
+      // Set the colour based on activity category
+      if (category.equals("Gym")) {
+        fill(220, 80, 80);
+      } else if (category.equals("Sports")) {
+        fill(70, 130, 180);
+      } else if (category.equals("Cardio")) {
+        fill(240, 170, 60);
+      } else if (category.equals("Commute")) {
+        fill(90, 170, 110);
+      } else if (category.equals("Recovery")) {
+        fill(150, 110, 190);
+      } else {
+        fill(130, 130, 130);
+      }
+
       // Draw a circle for this observation
-      fill(70, 130, 180);
       noStroke();
       ellipse(x, y, circleSize, circleSize);
 
