@@ -39,10 +39,20 @@ void setup() {
         circleSize = 35;
       }
 
+
+      //Calculate the position of this activity circle
+      int column = symbolCount % 10;
+      int rowNumber = symbolCount / 10;
+
+      float x = 40 + column * 55;
+      float y = 150 + rowNumber * 55;
+
       // Draw a circle for this observation
       fill(70, 130, 180);
       noStroke();
-      ellipse(random(50, 550), random(150, 400), circleSize, circleSize);
+      ellipse(x, y, circleSize, circleSize);
+
+      symbolCount++;
 
       //Print the observation in the console
       println("First activity: " + activity);
