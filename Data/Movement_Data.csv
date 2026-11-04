@@ -58,3 +58,12 @@
 57,19,31/10/2026,17:20,Mobility,Recovery,15,2,non university
 58,20,01/11/2026,08:30,Running,Cardio,20,3,non university
 59,20,01/11/2026,10:30,Stretching,Recovery,10,2,non university
+60,21,02/11/2026,08:30,Walking ,Commute,20,2,university 
+61,21,02/11/2026,11:00,Walking ,Commute,70,2,university 
+62,21,02/11/2026,16:10,Walking ,Commute,20,2,university 
+63,21,02/11/2026,19:40,Mobility,Recovery,10,2,university 
+64,22,03/11/2026,08:40,Walking ,Commute,20,2,university 
+65,22,03/11/2026,12:00,Walking ,Commute,20,2,university
+66,23,04/11/2026,08:30,Running,Cardio,50,5,non university
+67,23,04/11/2026,10:00,Stretching,Recovery,15,3,non university
+68,23,04/11/2026,15:20,Walking,Commute,45,2,non university
