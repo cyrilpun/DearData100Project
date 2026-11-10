@@ -1,7 +1,7 @@
 Table movementData;
 
 void setup() {
-  size(600, 450);
+  size(900, 450);
   background(245);
 
   //Load the csv data
