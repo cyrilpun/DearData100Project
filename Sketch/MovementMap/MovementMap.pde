@@ -84,4 +84,9 @@ void setup() {
   textSize(14);
   fill(90);
   text("Exploring my daily physical activites, time and effort", 40, 90);
+  
+  // Legend heading 
+  fill(30); 
+  textSize(16);
+  text("Activity Categories", 760, 65);
 }
