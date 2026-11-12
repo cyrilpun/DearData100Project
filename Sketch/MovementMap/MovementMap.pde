@@ -89,4 +89,35 @@ void setup() {
   fill(30); 
   textSize(16);
   text("Activity Categories", 760, 65);
+  
+  // Gym
+  fill(220, 80, 80);
+  ellipse(770, 110, 12, 12);
+  fill(30);
+  textSize(12);
+  text("Gym", 785, 114);
+  
+  // Sports
+  fill(70, 130, 180);
+  ellipse(770, 145, 12, 12);
+  fill(30);
+  text("Sports", 785, 149);
+  
+  // Cardio
+  fill(240, 170, 60);
+  ellipse(770, 180, 12, 12);
+  fill(30);
+  text("Cardio", 785, 184);
+  
+  // Commute
+  fill(90, 170, 110);
+  ellipse(770, 215, 12, 12);
+  fill(30);
+  text("Commute", 785, 219);
+  
+  // Recovery
+  fill(150, 110, 190);
+  ellipse(770, 250, 12, 12);
+  fill(30);
+  text("Recovery", 785, 254);
 }
