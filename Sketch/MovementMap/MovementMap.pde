@@ -85,7 +85,7 @@ void setup() {
   fill(90);
   text("Exploring my daily physical activites, time and effort", 40, 90);
   
-  // Legend heading 
+  // Activity category legend heading 
   fill(30); 
   textSize(16);
   text("Activity Categories", 760, 65);
@@ -120,4 +120,28 @@ void setup() {
   ellipse(770, 250, 12, 12);
   fill(30);
   text("Recovery", 785, 254);
+  
+  // Duration legend heading
+  fill(30);
+  textSize(16);
+  text("Activity Duration", 760, 300);
+  
+  // Small circle: less than 20 minutes
+  fill(130);
+  ellipse(770, 330, 15, 15);
+  fill(30);
+  textSize(12);
+  text("< 20 min", 795, 334);
+  
+  // Medium circle: 20 to 44 minutes
+  fill(130);
+  ellipse(770, 370, 25, 25);
+  fill(30);
+  text("20-44 min", 795, 374);
+  
+  // Large circle: 45 minutes or longer
+  fill(130);
+  ellipse(770, 415, 35, 35);
+  fill(30);
+  text("45+ min", 795, 419);
 }
