@@ -11,7 +11,6 @@ void setup() {
   println("Number of columns: " + movementData.getColumnCount());
 
   // Read every observation in the CSV
-  int symbolCount = 0;
   int universityCount = 0;
   int nonUniversityCount = 0;
   int sedentaryCount = 0;
@@ -19,12 +18,33 @@ void setup() {
   int universityVisualCount = 0;
   int nonUniversityVisualCount = 0;
 
+  // Count the observations before drawing
   for (int i = 0; i < movementData.getRowCount(); i++) {
 
     // Get the current row
     TableRow row = movementData.getRow(i);
 
-    //Read information from that rowYe
+    //Read information from that row
+    String category = row.getString("Category");
+    String dayType = row.getString("Type").trim();
+
+    // Count observations by category and day type
+    if (category.equals("Sedentary")) {
+      sedentaryCount++;
+    } else if (dayType.equals("university")) {
+      universityCount++;
+    } else if (dayType.equals("non university")) {
+      nonUniversityCount++;
+    }
+  }
+
+  // Draw the observations
+  for (int i =0; i < movementData.getRowCount(); i++) {
+
+    // Get the current row
+    TableRow row = movementData.getRow(i);
+
+    // Read the activity information
     String activity = row.getString("Activity");
     String category = row.getString("Category");
     int duration = row.getInt("Duration(min)");
@@ -33,12 +53,6 @@ void setup() {
 
     //Only process non-sedentary observations
     if (!category.equals("Sedentary")) {
-
-      if (dayType.equals("university")) {
-        universityCount++;
-      } else if (dayType.equals("non university")) {
-        nonUniversityCount++;
-      }
 
       //Set circle size based on activity duration
       int circleSize;
@@ -70,7 +84,8 @@ void setup() {
         rowNumber = nonUniversityVisualCount / 10;
 
         x = 40 + column * 55;
-        y = 500 + rowNumber * 55;
+        int universityRows = (universityCount + 9) / 10;
+        y = 180 + universityRows * 55 + 100 + rowNumber * 55;
 
         nonUniversityVisualCount++;
       }
@@ -101,8 +116,6 @@ void setup() {
       println("Duration: " + duration + " minutes");
       println("Effort: " + effort);
       println("Day type: " + dayType);
-    } else {
-      sedentaryCount++;
     }
   }
 
@@ -115,12 +128,15 @@ void setup() {
   textSize(14);
   fill(90);
   text("Exploring my daily physical activites, time and effort", 40, 90);
-  
-  // Day type headings 
+
+  // Day type headings
   fill(30);
   textSize(18);
   text("University Days", 40, 140);
-  text("Non-University Days", 40, 460);
+  int universityRows = (universityCount + 9) / 10;
+  float nonUniversityStartY = 180 + universityRows * 55 + 100;
+
+  text("Non-University Days", 40, nonUniversityStartY - 40);
 
   // Activity category legend heading
   fill(30);
