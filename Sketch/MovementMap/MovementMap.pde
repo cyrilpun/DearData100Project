@@ -4,6 +4,12 @@ void setup() {
   size(900, 760);
   background(245);
 
+  // Create a test activity object
+  MovementActivity testActivity = new MovementActivity("Football", "Sports", 60, 4, "university");
+
+  println("Test activity: " + testActivity.activity);
+  println("Test duration: " + testActivity.duration);
+
   //Load the csv data
   movementData = loadTable("Movement_Data.csv", "header");
 
@@ -54,16 +60,9 @@ void setup() {
     //Only process non-sedentary observations
     if (!category.equals("Sedentary")) {
 
-      //Set circle size based on activity duration
-      int circleSize;
-
-      if (duration < 20) {
-        circleSize = 15;
-      } else if (duration < 45) {
-        circleSize = 25;
-      } else {
-        circleSize = 35;
-      }
+      // Create an activity object using CSV values
+      MovementActivity currentActivity = new MovementActivity(activity, category, duration, effort, dayType);
+      println("Object created: " + currentActivity.activity);
 
       //Calculate the position of this activity circle
       int column = 0;
@@ -105,9 +104,9 @@ void setup() {
         fill(130, 130, 130);
       }
 
-      // Draw a circle for this observation
+      // Draw a circle for this observation using its object
       noStroke();
-      ellipse(x, y, circleSize, circleSize);
+      currentActivity.display(x, y);
 
 
       //Print the observation in the console
