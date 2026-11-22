@@ -4,12 +4,6 @@ void setup() {
   size(900, 760);
   background(245);
 
-  // Create a test activity object
-  MovementActivity testActivity = new MovementActivity("Football", "Sports", 60, 4, "university");
-
-  println("Test activity: " + testActivity.activity);
-  println("Test duration: " + testActivity.duration);
-
   //Load the csv data
   movementData = loadTable("Movement_Data.csv", "header");
 
@@ -62,7 +56,6 @@ void setup() {
 
       // Create an activity object using CSV values
       MovementActivity currentActivity = new MovementActivity(activity, category, duration, effort, dayType);
-      println("Object created: " + currentActivity.activity);
 
       //Calculate the position of this activity circle
       int column = 0;
@@ -89,20 +82,6 @@ void setup() {
         nonUniversityVisualCount++;
       }
 
-      // Set the colour based on activity category
-      if (category.equals("Gym")) {
-        fill(220, 80, 80);
-      } else if (category.equals("Sports")) {
-        fill(70, 130, 180);
-      } else if (category.equals("Cardio")) {
-        fill(240, 170, 60);
-      } else if (category.equals("Commute")) {
-        fill(90, 170, 110);
-      } else if (category.equals("Recovery")) {
-        fill(150, 110, 190);
-      } else {
-        fill(130, 130, 130);
-      }
 
       // Draw a circle for this observation using its object
       noStroke();
