@@ -117,6 +117,7 @@ void setup() {
   text("Non-University Days", 40, nonUniversityStartY - 40);
 
   // Activity category legend heading
+  noStroke();
   fill(30);
   textSize(16);
   text("Activity Categories", 760, 65);
@@ -175,6 +176,63 @@ void setup() {
   ellipse(770, 415, 35, 35);
   fill(30);
   text("45+ min", 795, 419);
+  
+  // Effort legend heading 
+  noStroke();
+  fill(30);
+  textSize(16);
+  text("Activity Effort", 760, 470);
+  
+  // Effort 1: very light activity 
+  fill(130);
+  stroke(40);
+  strokeWeight(0.5);
+  ellipse(770, 505, 20, 20);
+  
+  noStroke();
+  fill(30);
+  textSize(12);
+  text("1 - Very light", 795, 509);
+  
+  // Effort 2: light activity 
+  fill(130);
+  stroke(40);
+  strokeWeight(1.125);
+  ellipse(770, 540, 20, 20);
+  
+  noStroke();
+  fill(30);
+  text("2 - Light", 795, 544);
+  
+  // Effort 3: moderate activity 
+  fill(130);
+  stroke(40);
+  strokeWeight(1.75);
+  ellipse(770, 575, 20, 20);
+  
+  noStroke();
+  fill(30);
+  text("3 - Moderate", 795, 579);
+  
+  // Effort 4: hard activity 
+  fill(130);
+  stroke(40);
+  strokeWeight(2.375);
+  ellipse(770, 610, 20, 20);
+  
+  noStroke();
+  fill(30);
+  text("4 - Hard", 795, 614);
+  
+  // Effort 5: very hard activity 
+  fill(130);
+  stroke(40);
+  strokeWeight(3);
+  ellipse(770, 645, 20, 20);
+  
+  noStroke();
+  fill(30);
+  text("5 - Very hard", 795, 649);
 
   // Display observation counts in the console
   println("University observations: " + universityCount);

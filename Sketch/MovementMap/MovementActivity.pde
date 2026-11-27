@@ -28,7 +28,17 @@ class MovementActivity {
       return 35;
     }
   }
-
+  
+  // Calculate outline thickness based on effort 
+  float getOutlineWeight() {
+    
+    if (effort <= 0) {
+      return 0.5;
+    } else {
+      return map(effort, 1, 5, 0.5, 3);
+    }
+  } 
+  
   // Display the activity as a circle
   void display(float x, float y) {
 
@@ -36,7 +46,11 @@ class MovementActivity {
     
     // Set the colour using this object's category 
     setCategoryColour();
-
+    
+    // Set outline thickness based on effort 
+     stroke(40);
+     strokeWeight(getOutlineWeight());
+     
     ellipse(x, y, circleSize, circleSize);
   }
   
